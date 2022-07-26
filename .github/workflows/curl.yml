@@ -9,7 +9,7 @@ jobs:
       - name: Message Working
         run: |
             echo "Estou funcionando"
-      - name: Post new user
+      - name: Find User
         run : |
           curl -X GET https://alexandre-pas-pd.herokuapp.com/ \
           -H "Content-Type: application/json" \
