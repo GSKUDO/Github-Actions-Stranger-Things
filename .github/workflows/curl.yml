@@ -9,13 +9,11 @@ jobs:
       - name: Message Working
         run: |
             echo "Estou funcionando"
+      - name: Show site
+        run :  curl -L https://alexandre-pas-pd.herokuapp.com/
       - name: Find User
         run : |
-          curl -X GET https://alexandre-pas-dw.herokuapp.com/?page=1&size=10&name=Mike \
-          -H "Content-Type: application/json" \
-          -d '{"page":"1","size":"10","name":"Dustin"}'
+          curl -i -X GET https://alexandre-pas-dw.herokuapp.com/?page=1&size=10&name=Mike \
         continue-on-error: true
-      - name: Get all users
-        run :  curl https://alexandre-pas-pd.herokuapp.com/
       - name: Get nodejs version
         run: node -v
