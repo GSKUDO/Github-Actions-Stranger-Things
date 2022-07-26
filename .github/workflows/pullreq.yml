@@ -3,19 +3,18 @@ on:
   push:
     branches:
       - release
-
 jobs:
-    build:
-      name: Build
+  build:
+    name: Build
 
-    strategy:
-      matrix:
-        runs-on: [ubuntu-latest, macos-latest, windows-latest]
-      fail-fast: false
+  strategy:
+    matrix:
+      runs-on: [ubuntu-latest, macos-latest, windows-latest]
+    fail-fast: false
 
-    runs-on: ${{ matrix.runs-on }}
+  runs-on: ${{ matrix.runs-on }}
 
-    steps:
+  steps:
     - name: Checkout
       uses: actions/checkout@v2
 
