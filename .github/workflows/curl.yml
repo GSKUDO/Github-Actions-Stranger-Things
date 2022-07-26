@@ -11,7 +11,7 @@ jobs:
             echo "Estou funcionando"
       - name: Find User
         run : |
-          curl -X GET https://alexandre-pas-pd.herokuapp.com/ \
+          curl -X GET https://alexandre-pas-dw.herokuapp.com/?page=1&size=10&name=Mike \
           -H "Content-Type: application/json" \
           -d '{"page":"1","size":"10","name":"Dustin"}'
         continue-on-error: true
