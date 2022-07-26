@@ -5,9 +5,8 @@ on:
       - release
 
 jobs:
-
-  build:
-    name: Build
+    build:
+      name: Build
 
     strategy:
       matrix:
