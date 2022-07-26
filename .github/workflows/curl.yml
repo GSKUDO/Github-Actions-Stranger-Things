@@ -11,9 +11,9 @@ jobs:
             echo "Estou funcionando"
       - name: Post new user
         run : |
-          curl -X POST https://alexandre-pas-pd.herokuapp.com/ \
+          curl -X GET https://alexandre-pas-pd.herokuapp.com/ \
           -H "Content-Type: application/json" \
-          -d '{"name":"Name Test","origin":"Origin Test","status":"Status Test"}'
+          -d '{"page":"1","size":"10","name":"Dustin"}'
         continue-on-error: true
       - name: Get all users
         run :  curl https://alexandre-pas-pd.herokuapp.com/
